@@ -1,0 +1,352 @@
+/* =================================
+   GLOBAL RESET & BASE
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+/* =================================
+   COMMON CENTER CONTAINER
+================================= */
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+h1, h2, h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* =================================
+   INPUTS
+================================= */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+textarea {
+  resize: none;
+}
+
+/* =================================
+   BUTTONS
+================================= */
+button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #22c55e;
+  color: #000;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.logout {
+  background: #ef4444;
+  color: #fff;
+}
+
+button.secondary {
+  background: #38bdf8;
+  color: #000;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =================================
+   DASHBOARD BUTTON ROW
+================================= */
+.dashboard-buttons.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.dashboard-buttons.vertical button {
+    width: 100%;
+}
+
+.dashboard-buttons button {
+  flex: 1;
+}
+
+/* =================================
+   JOURNAL LIST
+================================= */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+li {
+  background: #0f172a;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* =================================
+   LOADER
+================================= */
+.loader {
+  display: none;
+  margin-top: 12px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* =================================
+   MOOD PAGE – TOP CARD
+================================= */
+.mood-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.mood-card {
+  background: #1e293b;
+  width: 360px;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.mood-display {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* =================================
+   GRAPH SECTION (FULL WIDTH)
+================================= */
+.graph-section {
+  width: 100%;
+  padding: 35px 20px 50px;
+  background: #0b1726;
+}
+
+.graph-section h3 {
+  text-align: center;
+  color: #38bdf8;
+}
+
+.graph-hint {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+/* 🔥 IMPORTANT FIX */
+.graph-box {
+  width: 100%;
+  height: 380px;
+  background: #0f1f35;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+#moodChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* =================================
+   TOAST (OPTIONAL)
+================================= */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 14px 20px;
+  border-radius: 6px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.toast.success { background: #22c55e; }
+.toast.error   { background: #ef4444; }
+.toast.info    { background: #38bdf8; }
+
+/* ============================= */
+/* BREATHING PAGE CENTER LAYOUT */
+/* ============================= */
+
+.breathing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+}
+
+.breathing-circle {
+    width: 150px;
+    height: 150px;
+    background: #38bdf8;
+    border-radius: 50%;
+    margin: 30px 0;
+    transition: all 4s ease-in-out;
+    box-shadow: 0 0 40px rgba(56,189,248,0.5);
+}
+
+.breathing-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.breath-btn {
+    width: 140px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.start-btn {
+    background: #22c55e;
+    color: #000;
+}
+
+.back-btn {
+    background: #38bdf8;
+    color: #000;
+}
+
+.breath-btn:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* ===== BREATHING SECTION ===== */
+
+.breathing-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  background: #38bdf8;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 4s ease-in-out;
+}
+
+.breathing-circle.expand {
+  transform: scale(1.5);
+  background: #22c55e;
+}
+
+.breathing-circle.shrink {
+  transform: scale(1);
+  background: #ef4444;
+}
+
+.analytics-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0f1f35;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.analytics-box h4 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.analytics-box p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+
+.journal-item {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.journal-item button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.journal-item button:first-of-type {
+  background: #38bdf8;
+  color: white;
+}
+
+.journal-item button:last-of-type {
+  background: #ef4444;
+  color: white;
+}

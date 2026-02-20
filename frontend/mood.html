@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MindWell – Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== TOP MOOD CARD ===== -->
+<div class="mood-page">
+  <div class="mood-card">
+    <h2>🌈 Mood Tracker</h2>
+    <p>How are you feeling today?</p>
+
+    <!-- Mood Slider -->
+    <input
+      type="range"
+      id="moodSlider"
+      min="1"
+      max="10"
+      value="5"
+    />
+    <!-- ===== BREATHING SECTION ===== -->
+<div class="breathing-section">
+    <h3>🧘 Calm Breathing</h3>
+    <div class="breathing-circle" id="breathingCircle">
+        <span id="breathingText">Start</span>
+    </div>
+    <button onclick="startBreathing()">Start Breathing</button>
+</div>
+
+
+    <!-- Mood Value + Emoji -->
+    <p id="moodValue">Mood: 5 😊</p>
+
+    <!-- Buttons -->
+    <button class="btn save" onclick="saveMood()">Save Mood</button>
+    <button class="btn back" onclick="goJournal()">Back to Journal</button>
+  </div>
+</div>
+
+<!-- ===== GRAPH SECTION ===== -->
+<div class="graph-section">
+  <h3>📈 Mood Over Time</h3>
+  <p class="graph-hint">
+    Higher line = better mood | Lower line = low mood
+  </p>
+
+  <div class="graph-wrapper">
+    <canvas id="moodChart"></canvas>
+  </div>
+  <div class="analytics-box">
+    <h4>📊 Weekly Insight</h4>
+    <p id="weeklyAverage"></p>
+    <p id="weeklyTrend"></p>
+</div>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="config.js"></script>
+<script src="api.js"></script>
+<script src="auth.js"></script>
+<script src="mood.js"></script>
+
+</body>
+</html>

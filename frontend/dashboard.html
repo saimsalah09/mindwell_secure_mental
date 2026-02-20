@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Dashboard</h2>
+  <p>Login successful, token saved!</p>
+
+  <!-- BUTTON ROW -->
+ <div class="dashboard-buttons vertical">
+
+    <button onclick="goJournal()">Go to Journal</button>
+    <button onclick="goMood()">Go to Mood Tracker</button>
+    <button onclick="goBreathing()">Breathing Mode</button>
+    <button onclick="exportData()">Export My Data</button>
+
+    <div class="summary-card">
+  <h3>Weekly Mood Summary</h3>
+  <p id="dashboardAverage">Loading...</p>
+
+  <!-- MINI CHART -->
+  <canvas id="dashboardChart" height="150"></canvas>
+</div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="config.js"></script>
+<script src="api.js"></script>
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>
