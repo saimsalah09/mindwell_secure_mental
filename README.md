@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 MindWell – Secure Mental Wellness Web Application
 
 MindWell is a privacy-focused full-stack mental wellness application where users can write encrypted journals, track daily moods, visualize emotional trends, and practice guided breathing exercises.
@@ -138,3 +139,7 @@ MindWell/ │
 Built with ❤️ by Ghaus
 
 Full Stack Developer (MERN Stack)
+=======
+# mindwell_secure_mental
+🧠 MindWell – Secure Mental Wellness Web Application
+>>>>>>> 7110af5196ce27a4c583d3508a80d017e328b9f3
