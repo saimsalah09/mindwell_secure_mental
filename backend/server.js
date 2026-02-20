@@ -28,6 +28,9 @@ mongoose
 app.get("/", (req, res) => {
   res.send("MindWell Backend Running");
 });
+app.get("/api/health", (req, res) => {
+  res.json({ status: "API Working Successfully" });
+});
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
